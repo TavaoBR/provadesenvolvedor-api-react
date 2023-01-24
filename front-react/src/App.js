@@ -7,7 +7,7 @@ function App() {
   const [data, setData] = useState([]);
  
    const getPonto = async () => {
-    fetch("http://localhost/api-rest-php/index.php")
+    fetch("http://localhost:4500/api/php-react/")
     .then((response) => response.json())
     .then((responseJson) => (
       console.log(responseJson),
@@ -43,7 +43,7 @@ function App() {
             }
             
             if(dadosEntries.punchType == 2){
-              return(<td>{dadosEntries.punchDateTime.replace(replaceDados[2], "")}</td>)
+              return(<td colspan="3">{dadosEntries.punchDateTime.replace(replaceDados[2], "")}</td>)
             } 
 
         }
@@ -106,17 +106,18 @@ function App() {
 
   return (
     <div className="App">
-
-        {
-          (<h2>{unicoNome}</h2>)
-        }
-
-
        <table class="table">
+        <thead>
+        
+        </thead>
+         <thead>
+          <th>{unicoNome}</th>
+          <th colspan="5"></th>  
+         </thead>
          <thead>
             <th data-label="Dia">Dia</th>
             <th data-label="Entrada 1">Entrada </th>
-            <th data-label="Saida 1">Saida </th>
+            <th data-label="Saida 1" colspan="3">Saida </th>
             <th data-label="Horas Trabalhadas">Qtd. HS</th>
          </thead>
          <tbody>
@@ -145,6 +146,7 @@ function App() {
           <th colspan="4"></th> 
             <th colspan="4" rowspan="5">{total}</th>   
           </tbody>
+
          
 
        </table>
