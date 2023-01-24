@@ -26,7 +26,6 @@ class ApiRest
  
  
          [
- 
              "employeName" => "Josevaldo Peixoto",
              "punchDate" => "20/01/2023",
              "entries" => 

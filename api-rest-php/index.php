@@ -18,10 +18,8 @@ switch($url)
 
     $method = $_SERVER['REQUEST_METHOD'];
 
-    if($method === "GET"){
-     
+    if($method === "GET" OR $method === "get"){
         $api->get();
-        
     }
 
    break; 
